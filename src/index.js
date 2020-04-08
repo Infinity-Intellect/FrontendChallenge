@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Route,BrowserRouter as Router } from 'react-router-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const routing = (
+  <Router>
+    <div>
+      <Route path="/" component={App} />
+    </div>
+  </Router>
+)
+
+ReactDOM.render(routing,
   document.getElementById('root')
 );
 
